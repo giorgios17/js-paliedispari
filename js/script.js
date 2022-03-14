@@ -24,7 +24,7 @@ const oddOrEvenUser = prompt('Scegli pari o dispari').toLowerCase().trim();
 let numeroUtente;
 do {
     numeroUtente = parseInt(prompt("Scegli un numero da 1 a 5"));
-} while (numeroUtente < 1 || numeroUtente > 5);
+} while (numeroUtente < 1 || numeroUtente > 5 || isNaN(numeroUtente));
 
 console.log('Hai scelto', oddOrEvenUser);
 console.log('Hai scelto il numero', numeroUtente);
