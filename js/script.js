@@ -13,13 +13,14 @@ function numeroRandomRange(min, max){
     return numeroRandom; 
 }
 
-
+// random bot number
 const numeroBot = numeroRandomRange(1, 5);
 console.log('Il numero del computer è', numeroBot);
 
-
+// user choice odd or even
 const oddOrEvenUser = prompt('Scegli pari o dispari').toLowerCase().trim();
 
+//user choice a number between 1 and 5
 let numeroUtente;
 do {
     numeroUtente = parseInt(prompt("Scegli un numero da 1 a 5"));
@@ -28,8 +29,8 @@ do {
 console.log('Hai scelto', oddOrEvenUser);
 console.log('Hai scelto il numero', numeroUtente);
 
-const somma =  numeroUtente + numeroBot;
 
+const somma =  numeroUtente + numeroBot;
 const sommaOddOrEven = oddOrEven(somma)
 
 console.log('La somma dei due numeri è', somma)
@@ -45,6 +46,7 @@ function oddOrEven(num){
     }
 }
 
+//winner or loser condition
 if((sommaOddOrEven === 'odd' && oddOrEvenUser === 'dispari') || (sommaOddOrEven === 'even' && oddOrEvenUser === 'pari')){
     console.log('Hai vinto')
 }
