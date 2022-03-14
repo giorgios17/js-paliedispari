@@ -5,16 +5,16 @@ Creare una funzione per capire se la parola inserita è palindroma */
 const parola = prompt('Inserisci una parola');
 console.log('La parola digitata è', parola);
 
-let parolaReverse= '';
-
-for(let i=parola.length -1; i >= 0; i--){
-    parolaReverse += parola[i]
-}
-console.log('La parola al contrario è', parolaReverse);
 
 
-function isPalindroma(string1, string2){
-   if(string1 === string2){
+function isPalindroma(stringToCheck){
+    let parolaReverse= '';
+
+    for(let i=stringToCheck.length -1; i >= 0; i--){
+        parolaReverse += stringToCheck[i]
+    }
+
+   if(stringToCheck === parolaReverse){
        console.log('La parola digitata è palindroma')
    }
    else{
@@ -22,7 +22,8 @@ function isPalindroma(string1, string2){
    }
 }
 
-isPalindroma(parola, parolaReverse);
+isPalindroma(parola);
+
 
 
 
