@@ -18,8 +18,12 @@ const numeroBot = numeroRandomRange(1, 5);
 console.log('Il numero del computer è', numeroBot);
 
 
-const oddOrEvenUser = prompt('Scegli pari o dispari');
-const numeroUtente = parseInt(prompt('Scegli un numero da 1 a 5'));
+const oddOrEvenUser = prompt('Scegli pari o dispari').toLowerCase().trim();
+
+let numeroUtente;
+do {
+    numeroUtente = parseInt(prompt("Scegli un numero da 1 a 5"));
+} while (numeroUtente < 1 || numeroUtente > 5);
 
 console.log('Hai scelto', oddOrEvenUser);
 console.log('Hai scelto il numero', numeroUtente);
