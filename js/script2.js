@@ -7,22 +7,23 @@ console.log('La parola digitata è', parola);
 
 
 
-function isPalindroma(stringToCheck){
+function reverseWord(stringToReverse){
     let parolaReverse= '';
 
-    for(let i=stringToCheck.length -1; i >= 0; i--){
-        parolaReverse += stringToCheck[i]
+    for(let i=stringToReverse.length -1; i >= 0; i--){
+        parolaReverse += stringToReverse[i]
     }
 
-   if(stringToCheck === parolaReverse){
-       console.log('La parola digitata è palindroma')
-   }
-   else{
-    console.log('La parola digitata NON è palindroma')
-   }
+   return parolaReverse;
 }
 
-isPalindroma(parola);
+if(reverseWord(parola) === parola ){
+    console.log('La parola digitata è palindroma')
+}
+else{
+ console.log('La parola digitata NON è palindroma')
+}
+
 
 
 
